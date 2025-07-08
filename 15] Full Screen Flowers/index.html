@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magical Flowers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen">
+    <script>
+      const screen = document.querySelector('.screen');
+      for (let i = 0; i < 60; i++) {
+        const flower = document.createElement('div');
+        flower.className = 'flower';
+        flower.style.top = `${Math.random() * 100}vh`;
+        flower.style.left = `${Math.random() * 100}vw`;
+        flower.style.animationDuration = `${8 + Math.random() * 6}s`;
+        flower.style.scale = `${0.8 + Math.random() * 0.6}`;
+
+        for (let j = 0; j < 6; j++) {
+          const petal = document.createElement('div');
+          petal.className = `petal rotate${j}`;
+          flower.appendChild(petal);
+        }
+
+        screen.appendChild(flower);
+      }
+    </script>
+  </div>
+</body>
+</html>
