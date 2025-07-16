@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+label {
+    height: 100px;
+    width: 200px;
+    display: block;
+    background-color: #0a1157;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background: #e5ff00;
+    border-radius: 100px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .circle {
+    transform: translateX(100px);
+    box-shadow: 0px 0px 40px 20px #e5ff00;
+    background: #e5ff00;
+}
