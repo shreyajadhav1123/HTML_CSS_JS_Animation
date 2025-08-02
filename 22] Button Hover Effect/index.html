@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Rotate Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="button-container">
+  <div class="glow-star" id="star"></div>
+  <button class="fancy-btn" onclick="rotateStar()">Click Me</button>
+</div>
+
+<script>
+  function rotateStar() {
+    const star = document.getElementById('star');
+    star.classList.add('rotate');
+    setTimeout(() => {
+      star.classList.remove('rotate');
+    }, 2000); // reset after rotation
+  }
+</script>
+
+</body>
+</html>
